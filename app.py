@@ -39,3 +39,15 @@ map_data = pd.DataFrame(
     columns=['lat', 'lon']
 )
 st.map(map_data)
+
+st.write("Streamlit has a bunch of widgets to interact with the user:")
+
+if st.button("Say hello"):
+    st.write("Why hello there")
+
+x = st.slider("x")
+st.write(x, "squared is", x * x)
+
+st.text_input("Your name", key="name")
+if st.session_state.name:
+    st.write(f"Hello {st.session_state.name}")
