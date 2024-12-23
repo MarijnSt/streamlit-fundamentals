@@ -71,3 +71,14 @@ option = st.selectbox(
 )
 
 st.write("You selected:", option)
+
+# Add a selectbox to the sidebar:
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
+
+add_slider = st.sidebar.slider(
+    "Select a range of values",
+    0, 100, (25, 75)
+)
