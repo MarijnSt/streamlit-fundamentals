@@ -1,0 +1,1 @@
+Simple project to learn the fundamentals of streamlit.
