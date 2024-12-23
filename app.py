@@ -10,7 +10,7 @@ df = pd.DataFrame({
 })
 
 st.write("Here's our first attempt at using data to create a table:")
-st.dataframe(df)
+st.table(df)
 
 st.write("Let's make a table with random numbers using numpy:")
 np_df = np.random.randn(10, 10)
@@ -22,3 +22,12 @@ df = pd.DataFrame(
     columns=("col %d" % i for i in range(20))
 )
 st.dataframe(df.style.highlight_max(axis=0))
+
+st.write("Let's generate a line chart with st.line_chart:")
+
+line_chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=["a", "b", "c"]
+)
+
+st.line_chart(line_chart_data)
