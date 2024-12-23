@@ -82,3 +82,16 @@ add_slider = st.sidebar.slider(
     "Select a range of values",
     0, 100, (25, 75)
 )
+
+# Use column layout
+left_column, right_column = st.columns(2)
+
+left_column.button("Press me!")
+
+with right_column:
+    chosen_house = st.radio(
+        "Sorting Hat",
+        ("Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin")
+    )
+    st.write(f"You chose {chosen_house} house!")
+
