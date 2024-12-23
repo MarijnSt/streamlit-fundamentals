@@ -59,3 +59,15 @@ if st.checkbox("Show dataframe"):
     )
     chart_data
 
+
+df_selection = pd.DataFrame({
+    "first column": [1, 2, 3, 4],
+    "second column": [10, 20, 30, 40],
+})
+
+option = st.selectbox(
+    "Which number do you like best?",
+    df_selection["first column"]
+)
+
+st.write("You selected:", option)
