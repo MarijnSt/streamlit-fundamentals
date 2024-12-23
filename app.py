@@ -51,3 +51,11 @@ st.write(x, "squared is", x * x)
 st.text_input("Your name", key="name")
 if st.session_state.name:
     st.write(f"Hello {st.session_state.name}")
+
+if st.checkbox("Show dataframe"):
+    chart_data = pd.DataFrame(
+        np.random.randn(10, 3),
+        columns=['a', 'b', 'c']
+    )
+    chart_data
+
