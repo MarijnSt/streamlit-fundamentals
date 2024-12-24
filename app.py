@@ -5,6 +5,13 @@ import time
 
 st.title("Hello World")
 
+if "counter" not in st.session_state:
+    st.session_state.counter = 0
+
+st.session_state.counter += 1
+
+st.write(f"Counter: {st.session_state.counter}")
+
 df = pd.DataFrame({
     "first column": [1, 2, 3, 4],
     "second column": [10, 20, 30, 40],
